@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import { BlockComponent } from './block/block.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-quests';
+  blockArray = [
+    { position: 'top-left' },
+    { position: 'top-right' },
+    { position: 'bottom-left' },
+    { position: 'bottom-right' },
+  ];
 }
