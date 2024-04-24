@@ -1,10 +1,17 @@
-<div>
-  <h2>{{user.photo}}</h2>
-  <h2>{{user.name}}</h2>
-  <input type="text" />
-  <div *ngIf="element == true">
-    <h2>{{user.age}}</h2>
-  </div>
-  <button *ngIf="element == false" (click)="showData()">Affiche</button>
-  <button *ngIf="element == true" (click)="hideData()">Cache malheureux</button>
+<div class="user-card">
+  <img [src]="user.photo" [alt]="user.name" />
+  <header>
+    <h2>Nom: {{user.name}}</h2>
+    <h2>Prenom: {{user.firstName}}</h2>
+  </header>
+  <main>
+    <div *ngIf="element == true">
+      <h2>Age: {{user.age}}</h2>
+    </div>
+  </main>
+  <footer>
+    <input id="name" [(ngModel)]="user.quote" placeholder="votre citation" />
+    <button *ngIf="element == false" (click)="showData()">Affiche</button>
+    <button *ngIf="element == true" (click)="hideData()">Cache malheureux</button>
+  </footer>
 </div>
